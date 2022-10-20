@@ -1,0 +1,625 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap'); */
+
+
+#zenbu{
+    /* border: 8px solid white;
+    background-image: linear-gradient(var(--c3)); */
+    background-color: rgb(255, 255, 255);
+}
+
+* {
+	padding:0;
+	margin:0;
+	font-family: 'Quicksand', sans-serif;
+	color: #333;
+}
+header {
+	height:70px;
+}
+header h1 {
+	display: inline-block;
+	float: left;
+	padding:15px 24px;
+	text-transform: uppercase;
+}
+header h1 a {
+	transition: .3s;
+}
+header h1 a:hover {
+	color: #84ff99;
+}
+header ul {
+	float: right;
+}
+header ul li {
+	padding:24px;
+	display: inline-block;
+}
+
+
+header ul li a:hover {
+	color: #84ff99;
+}
+a {
+	text-decoration: none;
+}
+.container {
+	width:90%;
+	margin:0 auto;
+}
+.container::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.mobile-menu {
+	float: right;
+	display: none;
+	padding:18px;
+}
+.mobile-menu:hover {
+	cursor: pointer;
+}
+#check {
+	display: none;
+}
+.sidebar {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: -300px;
+	width:300px;
+	background-color: rgba(122, 122, 122, 0.9);
+	transition: .3s;
+	z-index: 9999;
+}
+.sidebar ul li a {
+	color: #fff;
+}
+.sidebar ul li {
+	padding:24px;
+	transition: .3s;
+	transition-property: background-color;
+}
+.sidebar ul li:hover {
+	background-color: #84ff99;
+}
+#check:checked ~ .sidebar {
+	left: 0;
+}
+.banner {
+	background: url(landscape1.jpg);
+	padding:150px 0;
+}
+section {
+	padding:50px 0;
+}
+.banner img {
+	width: 100px;
+	border-radius: 10px;
+	box-shadow: 0 3px 5px #ddd;
+	margin-bottom: 10px;
+}
+.banner h2,
+.banner p,
+.banner span {
+	color: #fff;
+}
+.banner h2 {
+	margin-bottom: 10px;
+}
+.banner p {
+	font-size: 18px;
+}
+.banner-left {
+	padding-left:24px;
+}
+section h3 {
+	padding-bottom: 20px;
+	text-align: center;
+	margin:20px;
+	position: relative;
+}
+section h3::before {
+	content:'';
+	display: block;
+	position: absolute;
+	bottom: 0;
+	width:120px;
+	height:1px;
+	background-color: #ddd;
+	left: calc(50% - 60px);
+}
+section h3::after {
+	content:'';
+	display: block;
+	position: absolute;
+	bottom: -1px;
+	width:40px;
+	height:4px;
+	background-color: #84ff99;
+	left: calc(50% - 20px);
+}
+#about p {
+	text-align: justify;
+	text-indent: 30px;
+	line-height: auto;
+    padding-top: 30px;
+	margin-bottom: 100px;
+    font-size: 25px;
+}
+#skills,
+#contact {
+	background-color: #f9f9f9;
+}
+#skills .bar {
+	height: 30px;
+	background-color: #fff;
+	border:1px solid #ddd;
+	margin: 5px 0 20px 0;
+}
+.bar .nilai {
+	height:30px;
+	background-color: #84ff99;
+	display: inline-block;
+	color: rgb(0, 0, 0);
+	text-align: center;
+}
+.html {
+	width: 75%;
+}
+.css {
+	width: 60%;
+}
+.js {
+	width: 5%;
+}
+.php {
+	width: 40%;
+}
+
+.laravel {
+    width: 10%;
+}
+
+#skills2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 300px;
+    background-color: white;
+    padding: 0 12% 0 12%;
+    /* display: grid; */
+    grid-template-rows:auto;
+}
+  
+.card {
+    background-color: #f7f8f9;
+    transition: 0.3s;
+    width: 300px;
+    min-height: 350px;
+    padding: 32px;
+    margin: 81px 0;
+    text-align: center;
+}
+  
+.card:hover {
+    background-color: #84ff99;
+}
+/* .ps {
+	width:85%;
+} */
+.col-4 {
+	width:25%;
+	box-sizing: border-box;
+	padding:5px;
+	float: left;
+	text-align: center;
+	margin-bottom: 15px;
+}
+.col-4 img {
+	width:100%;
+}
+.col-4 a:hover img {
+	transform: scale(1.2);
+}
+.col-3 {
+	width:33.33%;
+	box-sizing: border-box;
+	float: left;
+	text-align: center;
+	padding:50px 10px;
+}
+.col-3 h4 {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 15px;
+}
+footer {
+	background-color: #333;
+	padding:50px 50px 50px 50px;
+	text-align: center;
+}
+footer small {
+	color: #fff;
+}
+html {
+	scroll-behavior: smooth;
+}
+
+@media (max-width: 968px){
+	.mobile-menu {
+		display: block;
+	}
+	header ul {
+		display: none;
+	}
+	.col-4 {
+		width:50%;
+	}
+	.col-3 {
+		width:100%;
+	}
+    #about p {
+        text-align: justify;
+        text-indent: 30px;
+        line-height: auto;
+        margin-bottom: 100px;
+        font-size: 20px;
+    }
+    #skills2 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 300px;
+        background-color: white;
+        padding: 0 12% 0 12%;
+        display: grid;
+        grid-template-rows:auto;
+    }
+
+}
+
+
+:root{
+    --c1: rgb(121, 121, 121);
+    --c2: rgb(42, 255, 202), rgb(0, 187, 140), rgb(0, 107, 126);
+    --c3: rgb(21, 84, 95), rgb(0, 255, 191), rgb(0, 107, 126);
+    --c4: #eee;
+    --c5: rgb(0, 255, 191), rgb(0, 107, 126);
+    --c6: rgb(0, 126, 109), rgb(0, 219, 190);
+    --c7: rgb(0, 0, 0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body{
+    background: #eee;
+	margin:0;
+    padding: 0;
+	font-family: 'Open Sans', sans-serif; */
+    /* background-image: linear-gradient(rgb(0, 107, 126), rgb(0, 255, 191), rgb(0, 107, 126));
+    border: 8px solid white;
+    color: rgb(255, 255, 255);
+}
+
+.text .foto .ukuran-gambar .line-heigth{
+    line-height: 10px;
+}
+
+.text .foto .ukuran-gambar{
+    width: 200px;
+    height: 200px;
+    margin-left: 650px;
+    border-radius: 50%;
+    margin: auto;
+    border: 8px solid var(--c4);
+}
+
+
+.ukuran-text{
+    font-size: 30px;
+    line-height: 50px;
+
+}
+
+@media screen and (max-width: 700px){
+   .ukuran-text{
+       font-size: 21px;
+       text-align: center;
+       line-height: 34px;
+   }
+}
+
+
+.text{
+    text-align: center;
+    font-size: 17px;
+    color: var(--c4);
+    font-family: 'Gloria Hallelujah', cursive;
+    line-height: 38px;
+}
+
+.akun {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 22px;
+    border: 8px solid var(--c4);
+    margin: auto;
+    max-width: 60%;
+    max-height: 500px;
+    min-width: 50%;
+    min-height: 200px;
+    padding: 5px 5px 5px 5px;
+    width: auto;
+    height: auto;
+    background-image: linear-gradient(var(--c6));
+   
+}
+
+@media screen and (max-width: 700px){
+    .akun{
+    border: 8px solid  var(--c4);
+    width: 80%;
+    height: 260px;
+    color: var(--c4);
+    font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1366px){
+    .akun{
+    border: 8px solid  var(--c4);
+    margin: auto;
+    max-width: 80%;
+    max-height: 450px;
+    color: var(--c4);
+    width:auto;
+    height: auto;
+    }
+}
+
+.akun #warna-kolom{
+    text-align: center;
+}
+
+.borders{
+    background-color: white;
+}
+
+.gelembung-pen{
+    border: 8px solid var(--c4);
+    padding: 10px 10px 10px 10px;
+    margin: auto;
+    max-width: 85%;
+    max-height: 600px;
+    width: 80%;
+    height: 450px;
+    background-image: linear-gradient(var(--c6));
+}
+
+@media screen and (max-width: 700px){
+      .gelembung-pen #article{
+        color: var(--c4);
+        font-family: 'Gloria Hallelujah', cursive;
+        font-size: 26px;
+        text-align: center;
+        margin-left: 0;
+        line-height: 40px;
+    }
+}
+
+.gelembung-pen #table{
+    color: var(--c4);
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 30px;
+    text-align: center;
+    margin-left: 0;
+    
+}
+
+.gelembung-pen #judul-table{
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+
+.gelembung-pen #table #table2{
+    background-image: linear-gradient(var(--c5));
+}
+
+.gelembung-pen #table #table3{
+    background-image: linear-gradient(var(--c5));
+}
+
+.organisasi{
+    border: 8px solid var(--c4);
+    margin: auto;
+    max-width: 85%;
+    max-height: 750px;
+    padding: 5px 5px 5px 5px;
+    width: 60%;
+    height: auto;
+    background-image: linear-gradient(var(--c6));
+}
+
+@media  screen and (max-width: 700px){
+    .organisasi{
+       font-size: 20px;
+       max-width: 400px;
+       width: auto;
+    }
+}
+
+.organisasi .organisasi2{
+    font-family: 'Gloria Hallelujah', cursive;
+    text-align: center;
+    font-size: 23px;
+    line-height: 45px;
+}
+
+@media  screen and (max-width: 700px){
+    .organisasi .organisasi2{
+       font-size: 20px;
+    }
+}
+
+
+.prestasi{
+    color: var(--c4);
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 20px;
+    text-align: center;
+    border: 8px solid var(--c4);
+    max-width: 85%;
+    max-height: 650px;
+    margin: auto;
+    padding: 5px 5px 5px 5px;
+    width: 60%;
+    height: auto;
+    background-image: linear-gradient(var(--c6));
+}
+
+@media  screen and (max-width: 700px){
+    .prestasi{
+       font-size: 20px;
+       max-width: 400px;
+       width: auto;
+    }
+}
+
+.prestasi .prestasi1{
+    font-size: 25px;
+}
+
+@media  screen and (max-width: 700px){
+    .prestasi .prestasi1{
+       font-size: 20px;
+    }
+}
+
+.skill{
+    font-family: 'Gloria Hallelujah', cursive;
+    text-align: left;
+    font-size: 26px;
+    border: 8px solid var(--c4);
+    margin: auto;
+    width: 50%;
+    height: auto;
+    padding: 5px 5px 5px 5px;
+    background-image: linear-gradient(var(--c6));
+}
+
+.skill .judul-skill{
+    text-align: center;
+}
+
+@media screen and (max-width: 700px){
+   .skill{
+       font-size: 20px;
+       max-width: 400px;
+       width: auto;
+   }
+}
+
+.inspirasi{
+    color: var(--c4);
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 22px;
+    text-align: center;
+}
+
+.inspirasi .kejar-id{
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 22px;
+    border: 8px solid var(--c4);
+    width: 50%;
+    height: auto;
+    margin: auto;
+    background-image: linear-gradient(var(--c6));
+}
+
+@media screen and (max-width: 700px){
+    .inspirasi .kejar-id{
+        font-size: 20px;
+        max-width: 400px;
+        width: auto;
+    }
+ }
+
+.inspirasi .Brainly{
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 22px;
+    border: 8px solid var(--c4);
+    width: 50%;
+    height: auto;
+    margin: auto;
+    background-image: linear-gradient(var(--c6));
+}
+
+@media screen and (max-width: 700px){
+    .inspirasi .Brainly{
+        font-size: 20px;
+        max-width: 400px;
+        width: auto;
+    }
+ }
+
+.inspirasi .Peduli-lindungi{
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 22px;
+    border: 8px solid var(--c4);
+    width: 50%;
+    height: auto;
+    margin: auto;
+    background-image: linear-gradient(var(--c6));
+}
+
+@media screen and (max-width: 700px){
+    .inspirasi .Peduli-lindungi{
+        font-size: 20px;
+        max-width: 400px;
+        width: auto;
+    }
+ } */
+
+
+
+
+
