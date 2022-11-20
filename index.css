@@ -186,10 +186,10 @@ section h3::after {
 	text-align: center;
 }
 .html {
-	width: 75%;
+	width: 80%;
 }
 .css {
-	width: 60%;
+	width: 75%;
 }
 .js {
 	width: 5%;
@@ -199,11 +199,11 @@ section h3::after {
 }
 
 .python{
-	width: 20%;
+	width: 25%;
 }
 
 .laravel {
-    width: 10%;
+    width: 40%;
 }
 
 #element .bar {
